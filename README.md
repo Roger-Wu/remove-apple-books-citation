@@ -44,7 +44,7 @@ A way to do this:
 2. Install Python3 and pip3: `brew install python3`
 3. (optional) Install [pyperclip](https://pypi.org/project/pyperclip/): `pip install pyperclip`
 
-There may have been python3 in your mac.
+There may have been python3 in your mac. Probably at `/usr/bin/python3`.
 
 The python3 installed with Homebrew may not be the default `python3` used in automator shell scripts.
 
