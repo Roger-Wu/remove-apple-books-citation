@@ -94,7 +94,7 @@ When you select texts in Apple Books, a small menu shows up.
 
 ![a small menu shows up in Books](https://user-images.githubusercontent.com/6902276/197212919-1068de68-d170-4bf5-8259-cdc55bce4f61.png)
 
-The keyboard shortcut and quick action doesn't work when the menu is shown.
+The keyboard shortcut and quick action won't work when the menu is shown.
 
 You need to click somewhere else to close the menu before using the keyboard shortcut.
 
