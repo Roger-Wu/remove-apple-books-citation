@@ -57,7 +57,7 @@ Create a new Quick Action in Automator like this one:
 1. Receive text in Books.app
 2. Run shell scripts with command:
   ```shell
-  /opt/homebrew/bin/python3 <path_to_the_dir>/copy_without_citation.py
+  /opt/homebrew/bin/python3 <path_to_the_dir>/remove_citation.py
   ```
 3. Copy to Clipboard
 4. Save the workflow with a name like "Copy without Citation.workflow".
