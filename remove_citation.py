@@ -1,5 +1,4 @@
 import sys
-import pyperclip
 
 def str_contains_citation(s):
     return '“' in s and '”' in s and 'Excerpt' in s
@@ -13,5 +12,4 @@ def remove_citation(s):
 
 # input text from stdin
 multiline_str = sys.stdin.read()
-# copy the stripped string to the clipboard
-pyperclip.copy(remove_citation(multiline_str))
+print(remove_citation(multiline_str))
