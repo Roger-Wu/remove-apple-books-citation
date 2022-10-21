@@ -42,7 +42,7 @@ A way to do this:
 
 1. Install [Homebrew](https://brew.sh/).
 2. Install Python3 and pip3: `brew install python3`
-3. (optional) Install [pyperclip](https://pypi.org/project/pyperclip/): `pip install pyperclip`
+3. (not necessary) Install [pyperclip](https://pypi.org/project/pyperclip/): `pip3 install pyperclip`
 
 There may have been python3 in your mac. Probably at `/usr/bin/python3`.
 
