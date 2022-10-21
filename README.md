@@ -28,7 +28,7 @@ The solution I made here is sure to work on macOS Monterey 12.6, released on Sep
 
 I tried some solutions from [Don't want iBooks to always paste the "Excerpt From" of what I have copied - Ask Different](https://apple.stackexchange.com/questions/137047/dont-want-ibooks-to-always-paste-the-excerpt-from-of-what-i-have-copied), and most of them don't work well in 2022.
 
-The solutions with `sed` command somehow doesn't work all the time, so I decided to create my own solution in Python.
+The solutions with `sed` command seems to not work properly with Unicode content, so I decided to create my own solution in Python.
 
 ## How to Set Up
 
