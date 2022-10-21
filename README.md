@@ -6,7 +6,23 @@ some python scripts to remove citation when copying from Apple Books
 
 The goal is to create a keyboard shortcut (like Cmd + Shift + C) in Apple Books that copy texts without the annoying citation info.
 
-The solution I made works on macOS Monterey 12.6, released on Sep 12, 2022.
+Instead of getting this when copying:
+```
+“Eliminate all other factors, and the one which remains must be the truth.”
+
+Excerpt From
+The Sign of the Four
+Arthur Conan Doyle
+https://books.apple.com/tw/book/the-sign-of-the-four/id395537209?l=en
+This material may be protected by copyright.
+```
+
+You get this when copying with a customized keyboard shortcut:
+```
+Eliminate all other factors, and the one which remains must be the truth.
+```
+
+The solution I made here is sure to work on macOS Monterey 12.6, released on Sep 12, 2022.
 
 ## What I've Tried
 
@@ -16,25 +32,27 @@ The solutions with `sed` command somehow doesn't work all the time, so I decided
 
 ## How to Set Up
 
-### Step 1. Download `copy_without_citation.py` from this repo.
+### Step 1. Download `remove_citation.py` from this repo.
 
-Save it in an easy-to-access path like `~/scripts/copy_without_citation.py`
+Save it in an easy-to-access path like `~/scripts/remove_citation.py`
 
-### Step 2. Make sure python3 and pyperclip are installed.
+### Step 2. Make sure python3 is available.
 
 A way to do this:
 
 1. Install [Homebrew](https://brew.sh/).
 2. Install Python3 and pip3: `brew install python3`
-3. Install pyperclip: `pip3 install pyperclip`
+3. (not necessary) Install [pyperclip](https://pypi.org/project/pyperclip/): `pip install pyperclip`
 
-([pyperclip](https://pypi.org/project/pyperclip/) is a Python module for interacting with the clipboard.)
+There may have been python3 in your mac.
+
+The python3 installed with Homebrew may not be the default `python3` used in automator shell scripts.
 
 ### Step 3. Create the Quick Action in Automator
 
 Create a new Quick Action in Automator like this one:
 
-![Quick Action in Automator](https://user-images.githubusercontent.com/6902276/197223579-bc4f8e0c-55e3-4bdd-8bb7-06d60e8bed33.png)
+![Quick Action in Automator](https://user-images.githubusercontent.com/6902276/197236129-acaa28ce-f7d7-4722-a61e-8f717eafec1f.png)
 
 The command is
 
@@ -42,11 +60,11 @@ The command is
 /opt/homebrew/bin/python3 <path_to_the_dir>/copy_without_citation.py
 ```
 
-Save it with a name like "Copy without Citation".
+Save it with a name like "Copy without Citation.workflow".
 
-Remember to replace <path_to_the_dir> with your own path to the script.
+Remember to replace `<path_to_the_dir>` with your own path to the script.
 
-Maybe replace the python3 path too with the result from `which python3`.
+Maybe replace the python3 path too with the result from `which python3` or just `python3`.
 
 ### Step 4. Create a Keyboard Shortcut
 
@@ -70,7 +88,7 @@ To solve this, you may grant Books.app Full Disk Access.
 
 Then the quick action should be functioning.
 
-### one more thing to keep in mind
+### One More Thing to Keep in Mind
 
 When you select texts in Apple Books, a small menu shows up.
 
@@ -82,4 +100,4 @@ You need to click somewhere else to close the menu before using the keyboard sho
 
 ## Welcome to Leave a Message
 
-Open an issue to say whatever you want to say about this repo.
+Open an issue to leave any suggestions about this repo.
